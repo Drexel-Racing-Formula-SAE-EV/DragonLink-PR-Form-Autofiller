@@ -1,0 +1,22 @@
+html, body {
+  width: 200px;
+  height: 500px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#customRadioContainer {
+  text-align: center;
+}
+#customRadioContainer .radio-group {
+  display: inline-flex;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+#customRadioContainer .radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}

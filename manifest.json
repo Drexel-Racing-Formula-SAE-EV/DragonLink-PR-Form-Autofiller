@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "DER DragonLink Purchase Request Form Filler",
+  "version": "1.0",
+  "description": "Fills out the Create Purchase Request form on DragonLink for you.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dragonlink.drexel.edu/actionCenter/organization/drexel-electric-racing/Finance/CreatePurchaseRequest"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

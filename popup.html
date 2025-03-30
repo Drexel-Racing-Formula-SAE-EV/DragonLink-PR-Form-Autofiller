@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Auto-Fill Popup</title>
+  <link rel="stylesheet" href="../DragonLink-PR-Form-Autofiller/popup.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+
+    input {
+      width: 100%;
+      margin: 5px 0;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    .radio-group {
+      display: flex;        /* place items side by side */
+      gap: 1em;             /* spacing between each radio+label */
+      align-items: center;  /* vertically align items */
+      margin-bottom: 0.5em; /* optional margin below the group */
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.3em; /* space between the circle and label text */
+    }
+  </style>
+</head>
+
+<body>
+  <h2>DER DragonLink Purchase Request Form Filler</h3>
+    <!-- Removed to keep everything visible on one screen <button id="newPRBtn">Open DragonLink finances</button> -->
+    <h3>Your Info</h3>
+    <select id="userPosition" name="pageResponse.Responses[ddl6049668].AnswerId">
+      <option selected="selected" value="Select your position...">Select your position...</option>
+      <option value="President">President</option>
+      <option value="Vice-President">Vice-President</option>
+      <option value="Treasurer">Treasurer</option>
+    </select>
+    <input type="tel" id="userPhone" placeholder="Your Contact Number" />
+    <input type="email" id="userEmail" placeholder="Your Email Address" />
+    <button id="saveBtn">Save</button>
+    <h3>This Purchase</h3>
+    <div id="customRadioContainer">
+      <p>Is this PR for food and/or for an event?</p>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="foodEvent" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="foodEvent" value="No"> No
+        </label>
+      </div>
+    </div>
+    <textarea id="excelPaste" placeholder="Paste cells from PR Spreadsheet"
+      title="Vendor to Link Gen columns from Excel"></textarea>
+    <button id="fillBtn">Fill</button>
+
+    <script src="../DragonLink-PR-Form-Autofiller/popup.js"></script>
+</body>
+
+</html>
